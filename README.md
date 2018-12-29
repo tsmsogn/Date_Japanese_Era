@@ -4,8 +4,6 @@
 [![Scrutinizer Code Quality](https://scrutinizer-ci.com/g/tsmsogn/Date_Japanese_Era/badges/quality-score.png?b=master)](https://scrutinizer-ci.com/g/tsmsogn/Date_Japanese_Era/?branch=master)
 [![codecov](https://codecov.io/gh/tsmsogn/Date_Japanese_Era/branch/master/graph/badge.svg)](https://codecov.io/gh/tsmsogn/Date_Japanese_Era)
 
-Unofficial git repository for Date_Japanese_Era
-
 ## Usage
 
 ```php
