@@ -46,15 +46,7 @@
  * @link      http://search.cpan.org/~miyagawa/Date-Japanese-Era-0.06/
  */
 
-/**
- * @see Date_Japanese_Era_Table
- */
-require_once dirname(__FILE__) . '/Era/Table.php';
-
-/**
- * @see Date_Japanese_Era_Exception
- */
-require_once dirname(__FILE__) . '/Era/Exception.php';
+namespace Date_Japanese_Era;
 
 /**
  * Conversion between Japanese Era / Gregorian calendar
@@ -123,6 +115,7 @@ class Date_Japanese_Era
      *
      * @param  array $args Args
      * @access public
+     * @throws Date_Japanese_Era_Exception
      * @return void
      */
     public function __construct(array $args)

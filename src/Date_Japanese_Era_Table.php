@@ -1,6 +1,6 @@
 <?php
 /**
- * Exception of Date_Japanese_Era
+ * Conversion table used by Date_Japanese_Era
  *
  * PHP version 5.2
  *
@@ -41,10 +41,13 @@
  * @copyright 2009-2010 Shinya Ohyanagi
  * @author    Shinya Ohyanagi <sohyanagi@gmail.com>
  * @license   New BSD License
+ * @link      http://search.cpan.org/~miyagawa/Date-Japanese-Era-0.06/
  */
 
+namespace Date_Japanese_Era;
+
 /**
- * Exception of Date_Japanese_Era
+ * Conversion Table for Date_Japanese_Era
  *
  * @category  Date
  * @package   Date_Japanese
@@ -52,7 +55,40 @@
  * @copyright 2009-2010 Shinya Ohyanagi
  * @author    Shinya Ohyanagi <sohyanagi@gmail.com>
  * @license   New BSD License
+ * @link      http://search.cpan.org/~miyagawa/Date-Japanese-Era-0.06/
  */
-class Date_Japanese_Era_Exception extends Exception
+class Date_Japanese_Era_Table
 {
+    /**
+     * ERA_TABLE
+     *
+     * @var    array
+     * @access public
+     */
+    public static $ERA_TABLE = array(
+        '明治' => array('meiji', 1868, 9, 8, 1912, 7, 29),
+        '大正' => array('taishou', 1912, 7, 30, 1926, 12, 24),
+        '昭和' => array('shouwa', 1926, 12, 25, 1989, 1, 7),
+        '平成' => array('heisei', 1989, 1, 8, 2038, 12, 31)
+    );
+
+
+    /**
+     * Convert era to ascii
+     *
+     * @param  mixed $ascii
+     * @access public
+     * @return mixed
+     */
+    public static function eraJa2Ascii()
+    {
+        $era  = array_reverse(self::$ERA_TABLE);
+        $data = array();
+        foreach ($era as $key => $val) {
+            $data[$val[0]] = array(
+                $key, $val[1], $val[2], $val[3], $val[4], $val[5], $val[6]
+            );
+        }
+        return $data;
+    }
 }
