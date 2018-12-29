@@ -1,0 +1,25 @@
+{
+    "name": "tsmsogn/date_japanese_era",
+    "authors": [
+        {
+            "name": "tsmsogn",
+            "email": "tsmsogn@gmail.com"
+        }
+    ],
+    "require": {
+        "php":">=5.3" 
+    },
+    "require-dev": {
+        "phpunit/phpunit": "^4.8|^5.7"
+    },
+    "autoload": {
+        "psr-4": {
+            "Date_Japanese_Era\\": "src/"
+        }
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "Date_Japanese_Era\\Test\\": "tests/"
+        }
+    }
+}
