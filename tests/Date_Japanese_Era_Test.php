@@ -64,4 +64,15 @@ class Date_Japanese_Era_Test extends TestCase
 
         $this->assertEquals(2009, $era->gregorianYear);
     }
+
+    /**
+     * @return void
+     * @throws \Date_Japanese_Era\Date_Japanese_Era_Exception
+     */
+    public function testConstructorWithAsciiEra()
+    {
+        $era = new Date_Japanese_Era(array('heisei', 21));
+
+        $this->assertEquals(2009, $era->gregorianYear);
+    }
 }
