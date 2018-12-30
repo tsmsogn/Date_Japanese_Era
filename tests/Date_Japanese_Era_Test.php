@@ -13,7 +13,7 @@ class Date_Japanese_Era_Test extends TestCase
      */
     public function testConstructorWithInvalidArgument()
     {
-        $this->setExpectedException('\Date_Japanese_Era\Date_Japanese_Era_Exception');
+        $this->setExpectedException('\InvalidArgumentException');
 
         new Date_Japanese_Era(array());
     }

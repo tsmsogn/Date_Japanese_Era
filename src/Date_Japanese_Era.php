@@ -47,6 +47,7 @@
  */
 
 namespace Date_Japanese_Era;
+use Date_Japanese_Era\Exception\InvalidEraException;
 
 /**
  * Conversion between Japanese Era / Gregorian calendar
@@ -116,6 +117,7 @@ class Date_Japanese_Era
      * @param  array $args Args
      * @access public
      * @throws Date_Japanese_Era_Exception
+     * @throws \InvalidArgumentException
      * @return void
      */
     public function __construct(array $args)
@@ -125,7 +127,7 @@ class Date_Japanese_Era
         } else if (count($args) === 2) {
             $this->_fromEra($args);
         } else {
-            throw new Date_Japanese_Era_Exception(
+            throw new \InvalidArgumentException(
                 'Invalid number of arguments: ' . count($args)
             );
         }
