@@ -33,6 +33,17 @@ class Date_Japanese_Era_Test extends TestCase
      * @return void
      * @throws \Date_Japanese_Era\Date_Japanese_Era_Exception
      */
+    public function testConstructorWithUnsupportedDate()
+    {
+        $this->setExpectedException('\Date_Japanese_Era\Date_Japanese_Era_Exception');
+
+        new Date_Japanese_Era(array(1, 1, 1));
+    }
+
+    /**
+     * @return void
+     * @throws \Date_Japanese_Era\Date_Japanese_Era_Exception
+     */
     public function testConstructorWithDate()
     {
         $era = new Date_Japanese_Era(array(2009, 7, 11));
